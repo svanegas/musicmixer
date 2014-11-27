@@ -5,7 +5,7 @@ MusicMixer is an Assembly application which allows to mix two mp3 files and gene
 The project was mainly developed using the [libsndfile] library by [Erik de Castro Lopo].
 With this C library we read and write files containing sampled audio data.
 
-The application is composed by two files: a C file from which the library functions are invoked and an Assembly file which is used to call the methods developed in C.
+The application is composed by two files: a *C* file from which the library functions are invoked and an *Assembly* file which is used to call the methods developed in *C*.
 The core logic, consisting in mixing two MP3 audio files and writing the result in a new one, was implemented in Assembly language. **MMX** instructions were used to reduce the processing time, because they allow to execute multiple additions at the same time.
 
 Due to the fact the library wasn't compatible with MP3 audio files, the program converts the input files to WAV format using [ffmpeg] library at the beginning and it does the inverse process at the end of the execution.
@@ -16,7 +16,7 @@ Due to the fact the library wasn't compatible with MP3 audio files, the program 
 
 In order to manipulate the audio files, libraries installations are needed.
 
-To install the ffmpeg library, follow these steps:
+To install the *ffmpeg* library, follow these steps:
 * Download the library package from the official [ffmpeg download page].
 * Extract the files in the desired directory.
 * In a terminal, open the directory just extracted.
@@ -36,6 +36,10 @@ $ apt-get install automake
 $ apt-get install libtool
 $ apt-get install python
 ```
+* Install the developer package of the library, using the command:
+```sh
+$ apt-get install libsndfile1-dev
+```
 
 * Download the library package from the official [libsndfile download page]
 * Extract the files in the desired directory
@@ -53,6 +57,7 @@ Open either *double* or *mmx* directory to build and run the application.
 Inside of any of these folders you will find three files: `build.sh`, `mp3Interface.c` and `musicmixer.asm`.
 You should run the `build.sh` script which will compile and link the other two files:
 ```sh
+  $ chmod 755 build.sh
   $ ./build.sh
 ```
 After running the script you will be able to see an executable file called `musicmixer`. To run the MusicMixer application use the following command:
