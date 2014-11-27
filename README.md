@@ -1,5 +1,5 @@
 #MusicMixer
----
+
 MusicMixer is an Assembly application which allows to mix two mp3 files and generate a fully audible MP3 file with the resulting song.
 
 The project was mainly developed using the [libsndfile] library by [Erik de Castro Lopo].
@@ -20,7 +20,7 @@ To install the ffmpeg library, follow these steps:
 * Download the library package from the official [ffmpeg download page].
 * Extract the files in the desired directory.
 * In a terminal, open the directory just extracted.
-* Run the following commands:
+* Run the following commands, (*make sure to have gcc compiler and nasm correctly installed*):
 ```sh
 $ ./configure
 $ make
@@ -34,7 +34,6 @@ $ apt-get install autoconf
 $ apt-get install autogen
 $ apt-get install automake
 $ apt-get install libtool
-$ apt-get install pkgconfig
 $ apt-get install python
 ```
 
@@ -42,7 +41,6 @@ $ apt-get install python
 * Extract the files in the desired directory
 * Open the directory just extracted and run the following commands:
 ```sh
-$ ./autogen.sh
 $ ./configure --enable-gcc-werror
 $ make
 $ sudo make check
